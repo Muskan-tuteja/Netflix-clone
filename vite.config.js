@@ -2,7 +2,8 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/Netflix-clone/',
+ base: process.env.NODE_ENV === 'production' ? '/netflix-clone/' : '/',
+   plugins: [react()],
 })
 
 
